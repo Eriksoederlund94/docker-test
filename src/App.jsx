@@ -1,45 +1,20 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import styled from 'styled-components';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    <AppWrapper className='App'>
+      <h1>Hello Docker</h1>
+    </AppWrapper>
+  );
 }
 
-export default App
+const AppWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  font-size: 4rem;
+`;
+
+export default App;
